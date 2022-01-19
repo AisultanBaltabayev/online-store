@@ -1,16 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import Users from "../pages/Users";
+import { routers } from "../_helpers/routers";
 
 const Root = () => {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/users" element={<Users />} />
-      </Routes>
-    </div>
+    <Routes>
+      {routers.map((route) => {
+        return <Route {...route} />;
+      })}
+    </Routes>
   );
 };
 

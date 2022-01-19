@@ -4,7 +4,6 @@ import Root from "./Root";
 import { history } from "../_helpers/history";
 
 function App() {
-  const array = [];
   return (
     <Router history={history}>
       <Root />
